@@ -16,6 +16,7 @@
     color: #000;
 }
 
+section#content {font-size: 1.55em;}
 main.row article, main.row aside{padding-top:0.5em;}
 
 main.row aside .block{margin-bottom: 2rem;}
@@ -53,6 +54,7 @@ img.pronet {
     height: 20px;
     margin: -4px 4px 0 0;
 }
+
 
 .hpbiopic {
 	float: left;
@@ -93,9 +95,14 @@ label:after {
 	content: " "
 }
 
-/* For print */
-@media print {
 
+@media only screen {
+	section#content {
+		background: -moz-linear-gradient(bottom, #008cf7 1%, #eeeeff 11%, #fff 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(bottom, #008cf7 1%, #eeeeff 11%, #fff 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, #008cf7 1%, #eeeeff 11%, #fff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008cf7', endColorstr='#efff',GradientType=1 ); /* IE6-9 */		
+	}
 }
 
 /* Form small devic(Mobile phone) */
@@ -107,3 +114,4 @@ label:after {
 @media only screen and (min-width: 480px){
 
 }
+
